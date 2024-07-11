@@ -6,15 +6,15 @@ import { rateLimiter } from "./middlewares";
 import { Code, sendResponse } from "./utils";
 
 const PORT = config.port;
-const CORS_ORIGINS = process.env.CORS_ORIGINS
-  ? JSON.parse(process.env.CORS_ORIGINS)
-  : ["http://localhost:3000"];
+// const CORS_ORIGINS = process.env.CORS_ORIGINS
+//   ? JSON.parse(process.env.CORS_ORIGINS)
+//   : ["http://localhost:3000"];
 
 const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: CORS_ORIGINS,
+    // origin: CORS_ORIGINS,
     optionsSuccessStatus: 200,
   })
 );
