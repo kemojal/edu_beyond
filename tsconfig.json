@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "types": ["node", "Multer"],
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "."
+    // "paths": {
+    //   "mul,ter": ["node_modules/@types/multer/index.d.ts"]
+    // }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  }
+}
