@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "es2020",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
@@ -8,15 +8,16 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "outDir": "./dist",
-    "types": ["node", "Multer"],
+    "types": ["node", "multer", "express", "cors", "winston", "pdf-lib"],
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "."
-    // "paths": {
-    //   "mul,ter": ["node_modules/@types/multer/index.d.ts"]
-    // }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
+  "include": [
+    "**/*.ts",
+    "node_modules/@edu_beyound/**/*.ts",
+    "node_modules/@edu_beyound/*.ts"
+  ],
+  "exclude": ["node_modules/*/!(@edu_beyound)/**/*.ts"],
   "ts-node": {
     "transpileOnly": true,
     "files": true

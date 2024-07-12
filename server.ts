@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import config from "./config";
 import { useRoutes } from "./routes";
-import { rateLimiter } from "./middlewares";
 import { Code, sendResponse } from "./utils";
+import { rateLimiter } from "middlewares/RateLimiter";
 
 const PORT = config.port;
 

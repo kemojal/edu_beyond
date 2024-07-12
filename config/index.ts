@@ -1,6 +1,6 @@
 // import dotenv from "dotenv";
 import multer from "multer";
-import { pdfFilter } from "../middlewares";
+import { pdfFilter } from "utils/file";
 
 const config = {
   port: process.env.PORT || 3003,
@@ -15,7 +15,7 @@ const config = {
 };
 
 export default config;
-``
+``;
 
 const UPLOAD_PATH = process.env.UPLOAD_PATH || "uploads";
 export const upload = multer({
