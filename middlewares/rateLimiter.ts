@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { MAX_REQUEST, WINDOW_SIZE_MS } from "../utils/constants";
 
 
 // Rate limiter
@@ -32,8 +33,8 @@ import { Request, Response, NextFunction } from "express";
 //   next();
 // };
 
-const WINDOW_SIZE_MS = 60 * 1000; // 1 minute
-const MAX_REQUESTS = 10;
+// const WINDOW_SIZE_MS = 60 * 1000; // 1 minute
+// const MAX_REQUESTS = 10;
 
 interface RateLimitInfo {
   count: number;
@@ -53,7 +54,7 @@ class RateLimiter {
       rateLimitInfo = { count: 1, lastReset: now };
     } else {
       rateLimitInfo.count++;
-      if (rateLimitInfo.count > MAX_REQUESTS) {
+      if (rateLimitInfo.count > MAX_REQUEST) {
         const retryAfter = Math.ceil(
           (rateLimitInfo.lastReset + WINDOW_SIZE_MS - now) / 1000
         );

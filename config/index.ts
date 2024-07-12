@@ -1,16 +1,22 @@
 // import dotenv from "dotenv";
 import multer from "multer";
-import { pdfFilter } from "utils/file";
+import { pdfFilter } from "../utils/file";
+import {
+  DEFAULT_PORT,
+  FILE_TYPES,
+  MAX_FILE_SIZE_BYTES,
+  MAX_REQUEST,
+} from "../utils/constants";
 
 const config = {
-  port: process.env.PORT || 3003,
+  port: process.env.PORT || DEFAULT_PORT,
   rateLimit: {
     windowMs: 1 * 60 * 1000, // 1 minute
-    max: 10, // limit each IP to 10 requests per windowMs
+    max: MAX_REQUEST, // limit each IP to 10 requests per windowMs
   },
   fileUpload: {
-    limits: { fileSize: 10 * 1024 * 1024 }, // 10MB limit
-    fileTypes: ["application/pdf"],
+    limits: { fileSize: MAX_FILE_SIZE_BYTES }, // 10MB limit
+    fileTypes: [FILE_TYPES],
   },
 };
 

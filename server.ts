@@ -3,7 +3,8 @@ import cors from "cors";
 import config from "./config";
 import { useRoutes } from "./routes";
 import { Code, sendResponse } from "./utils";
-import { rateLimiter } from "middlewares/RateLimiter";
+import { rateLimiter } from "./middlewares/RateLimiter";
+import logger from "./utils/logger";
 
 const PORT = config.port;
 
@@ -29,8 +30,8 @@ app.use((req, res) => {
 });
 
 process.on("uncaughtException", function (error, origin) {
-  console.log("error", error);
-  console.log("origin", origin);
+  logger.error(`💥❌ error: ${error.message}`, { error });
+  logger.info(`origin: ${origin}`);
   process.exit(1);
 });
 

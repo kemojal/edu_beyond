@@ -4,7 +4,7 @@ import { Express, NextFunction, Request, Response } from "express";
 import { Code, sendResponse } from "../../utils";
 import { handleFileUpload } from "../../services/upload";
 import { validateFileContent } from "../../middlewares/fileValidation";
-import { fileSizeLimiter } from "middlewares/fileSizeLimiter";
+import { fileSizeLimiter } from "../../middlewares/fileSizeLimiter";
 
 export function uploadRoutes(app: Express) {
   app.get("/", (req: Request, res: Response, next: NextFunction) => {
