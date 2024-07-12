@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { Code, sendResponse } from "../utils";
-
-const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
-// const MAX_FILE_SIZE_MB = MAX_FILE_SIZE_BYTES / (1024 * 1024);
+import { MAX_FILE_SIZE_BYTES } from "../utils/constants";
 
 export const createFileSizeLimiter = (
   maxSizeBytes: number = MAX_FILE_SIZE_BYTES
