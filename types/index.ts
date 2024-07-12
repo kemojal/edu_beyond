@@ -9,5 +9,10 @@ export interface File {
 }
 
 export interface UploadedFile {
-    path: string;
-  }
+  path: string;
+}
+
+export interface RateLimitInfo {
+  count: number;
+  lastReset: number;
+}

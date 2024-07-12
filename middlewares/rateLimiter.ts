@@ -1,45 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { MAX_REQUEST, WINDOW_SIZE_MS } from "../utils/constants";
-
-
-// Rate limiter
-// const requestCounts: { [key: string]: { count: number; lastReset: number } } =
-//   {};
-
-// export const rateLimiter = (
-//   req: Request,
-//   res: Response,
-//   next: NextFunction
-// ) => {
-//   const ip = req.ip || req.socket.remoteAddress || "unknown";
-//   const now = Date.now();
-//   const WINDOW_SIZE_MS = 60 * 1000; // 1 minute
-
-//   if (!requestCounts[ip]) {
-//     requestCounts[ip] = { count: 1, lastReset: now };
-//   } else {
-//     if (now - requestCounts[ip].lastReset > WINDOW_SIZE_MS) {
-//       requestCounts[ip] = { count: 1, lastReset: now };
-//     } else {
-//       requestCounts[ip].count++;
-//       if (requestCounts[ip].count > 10) {
-//         return res
-//           .status(429)
-//           .json({ success: false, message: "Too many requests" });
-//       }
-//     }
-//   }
-
-//   next();
-// };
-
-// const WINDOW_SIZE_MS = 60 * 1000; // 1 minute
-// const MAX_REQUESTS = 10;
-
-interface RateLimitInfo {
-  count: number;
-  lastReset: number;
-}
+import { RateLimitInfo } from "types";
 
 class RateLimiter {
   private requestCounts: Map<string, RateLimitInfo> = new Map();

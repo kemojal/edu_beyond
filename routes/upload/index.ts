@@ -1,6 +1,4 @@
 import { Express, NextFunction, Request, Response } from "express";
-// import { fileSizeLimiter, rateLimiter } from "../../middlewares";
-// import * as path from "path";
 import { Code, sendResponse } from "../../utils";
 import { handleFileUpload } from "../../services/upload";
 import { validateFileContent } from "../../middlewares/fileValidation";

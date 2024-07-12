@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { Code, sendResponse } from "../utils";
-import { MAX_FILE_SIZE_BYTES } from "../utils/constants";
+import { MAX_FILE_SIZE_BYTES, MB_IN_BYTES } from "../utils/constants";
 
 export const createFileSizeLimiter = (
   maxSizeBytes: number = MAX_FILE_SIZE_BYTES
@@ -27,7 +27,7 @@ export const createFileSizeLimiter = (
     }
 
     if (size > maxSizeBytes) {
-      const maxSizeMB = maxSizeBytes / (1024 * 1024);
+      const maxSizeMB = maxSizeBytes / (MB_IN_BYTES);
       sendResponse(res, Code.PayloadTooLarge, {
         success: false,
         message: `File too large. Maximum size is ${maxSizeMB} MB.`,

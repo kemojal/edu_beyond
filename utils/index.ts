@@ -1,5 +1,3 @@
-// import { HttpStatusCode } from "./enums";
-
 import { Response } from "express";
 import { Values } from "../types";
 
