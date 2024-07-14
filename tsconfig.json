@@ -1,23 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "ESNext",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "outDir": "./dist",
-    "types": ["node", "multer", "express", "cors", "winston", "pdf-lib"],
+    "types": [
+      "node",
+      "multer",
+      "express",
+      "cors",
+      "winston",
+      "pdf-lib",
+      "jest"
+    ],
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "."
   },
-  "include": [
-    "**/*.ts",
-    "node_modules/@edu_beyound/**/*.ts",
-    "node_modules/@edu_beyound/*.ts"
-  ],
-  "exclude": ["node_modules/*/!(@edu_beyound)/**/*.ts"],
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"],
   "ts-node": {
     "transpileOnly": true,
     "files": true

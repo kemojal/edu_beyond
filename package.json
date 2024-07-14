@@ -3,22 +3,37 @@
   "private": true,
   "description": "Server for beyound",
   "scripts": {
-    "start": "nodemon server.ts"
+    "start": "nodemon server.ts",
+    "test": "jest"
   },
   "dependencies": {
+    "@types/glob": "^8.1.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "glob": "^11.0.0",
     "multer": "^1.4.5-lts.1",
     "pdf-lib": "^1.17.1",
     "winston": "^3.13.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/chai-http": "^4.2.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/mocha": "^10.0.7",
     "@types/multer": "^1.4.11",
     "@types/node": "^20.14.10",
+    "@types/supertest": "^6.0.2",
+    "chai": "^5.1.1",
+    "chai-http": "^5.0.0",
+    "jest": "^29.7.0",
+    "mocha": "^10.6.0",
     "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.16.2",
     "typescript": "^5.5.3"
   }
 }

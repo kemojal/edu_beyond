@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { MAX_REQUEST, WINDOW_SIZE_MS } from "../utils/constants";
 import { RateLimitInfo } from "types";
 
-class RateLimiter {
+export class RateLimiter {
   private requestCounts: Map<string, RateLimitInfo> = new Map();
 
   limit = (req: Request, res: Response, next: NextFunction): void => {
