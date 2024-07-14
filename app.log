@@ -15,3 +15,5 @@
 {"level":"info","message":"📁 🚀✨ File uploaded successfully: 889c9c0930071a85e3c870ff165f14f7 🎉","timestamp":"2024-07-14T09:20:08.586Z"}
 {"level":"info","message":"📁 🚀✨ File uploaded successfully: fe1b4487f238fb72cb988678de667905 🎉","timestamp":"2024-07-14T09:23:10.404Z"}
 {"level":"info","message":"📁 🚀✨ File uploaded successfully: aa33e9b15c4a8f7b6d5ec23f7438a533 🎉","timestamp":"2024-07-14T09:51:19.657Z"}
+{"level":"info","message":"📁 🚀✨ File uploaded successfully: f141c4fee5196cbeb1dbc6615915d457 🎉","timestamp":"2024-07-14T17:56:20.678Z"}
+{"error":{"storageErrors":[]},"level":"error","message":"💥❌ Unknown upload error: Only PDF files are allowed!","timestamp":"2024-07-14T17:57:05.838Z"}
