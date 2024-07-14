@@ -31,7 +31,7 @@ This is the backend server for the Beyond application. It is built with Express.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/beyond-server.git
+   git clone https://github.com/kemojal/edu_beyond.git
    ```
 
 2. Navigate to the project directory:
@@ -114,9 +114,9 @@ Limits the number of requests from a single IP address.
 **Location:** `./middlewares/rateLimiter.ts`
 
 **Default Configuration:**
+
 - `MAX_REQUEST`: 10 requests
 - `WINDOW_SIZE_MS`: 1 minutes
-
 
 #### File Size Limiter
 
@@ -125,8 +125,8 @@ Restricts the size of uploaded files.limits the size of the file to 10MB
 **Location:** `./middlewares/fileSizeLimiter.ts`
 
 **Default Configuration:**
-- `MAX_FILE_SIZE_BYTES`: 10 MB
 
+- `MAX_FILE_SIZE_BYTES`: 10 MB
 
 #### File Validation
 
@@ -134,13 +134,9 @@ Validates the content of uploaded files. Ensure that the uploaded file has at le
 
 **Location:** `./middlewares/fileValidation.ts`
 
-
 ### Error Handling
 
 The server gracefully handles uncaught exceptions and logs the errors using Winston.
-
-
-
 
 **Location:** `./utils/logger.ts`
 
@@ -149,3 +145,4 @@ The server gracefully handles uncaught exceptions and logs the errors using Wins
 ```text
 💥❌ error: File too large
 origin: uncaughtException
+```
